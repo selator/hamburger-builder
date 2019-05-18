@@ -1,9 +1,9 @@
 <template>
   <div class="hamburger">
-    <div class="bun">Bun</div>
+    <div class="bun upper">Bun</div>
     <div v-on:click="showChooser()" class="plus">+</div>
     <div v-for="(ingredient, index) in ingredients" v-bind:key="index" v-on:click="removeAt(index)" v-bind:style="getColorStyle(ingredient.color)">{{ ingredient.name }}</div>
-    <div class="bun">Bun</div>
+    <div class="bun lower">Bun</div>
   </div>
 </template>
 
@@ -37,6 +37,12 @@
 }
 .bun {
   background-color: chocolate;
+}
+.bun.upper {
+  border-radius: 15px 15px 0 0;
+}
+.bun.lower {
+  border-radius: 0 0 15px 15px;
 }
 .plus {
   color: black;

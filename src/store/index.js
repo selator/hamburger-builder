@@ -10,7 +10,10 @@ const store = new Vuex.Store({
       {name: 'Lettuce', color: '#7fe02a'},
       {name: 'Seitan', color: '#664411'},
       {name: 'Tomato', color: '#ee0000'},
-      {name: 'Pickles', color: '#25c160'}]
+      {name: 'Pickles', color: '#25c160'},
+      {name: 'Ketchup', color: '#ff1111'},
+      {name: 'Mustard', color: '#d6c000'},
+    ]
   },
   mutations: {
     addIngredient(state, ingredient) {

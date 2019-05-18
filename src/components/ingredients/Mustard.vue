@@ -1,11 +1,10 @@
 <template>
-    <div>This is plain gluten.</div>
-
+    <div>Yellow condiment.</div>
 </template>
 
 <script>
     export default {
-        name: "Seitan"
+        name: "Mustard"
     }
 </script>
 

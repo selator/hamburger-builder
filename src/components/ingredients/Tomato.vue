@@ -1,11 +1,10 @@
 <template>
-    <div>This is plain gluten.</div>
-
+    <div>This is a tomato.</div>
 </template>
 
 <script>
     export default {
-        name: "Seitan"
+        name: "Tomato"
     }
 </script>
 

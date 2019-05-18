@@ -1,11 +1,10 @@
 <template>
-    <div>This is plain gluten.</div>
-
+    <div>Pickled cucumbers.</div>
 </template>
 
 <script>
     export default {
-        name: "Seitan"
+        name: "Pickles"
     }
 </script>
 

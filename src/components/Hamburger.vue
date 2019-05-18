@@ -46,5 +46,6 @@
 }
 .plus {
   color: black;
+  width: 100%;
 }
 </style>

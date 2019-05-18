@@ -1,3 +1,7 @@
+.DS_Store
+/dist
+.idea
+
 # Logs
 logs
 *.log
@@ -34,7 +38,6 @@ build/Release
 
 # Dependency directories
 node_modules/
-jspm_packages/
 
 # TypeScript v1 declaration files
 typings/
@@ -50,9 +53,6 @@ typings/
 
 # Output of 'npm pack'
 *.tgz
-
-# Yarn Integrity file
-.yarn-integrity
 
 # dotenv environment variables file
 .env

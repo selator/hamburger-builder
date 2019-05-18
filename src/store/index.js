@@ -7,7 +7,7 @@ const store = new Vuex.Store({
   state: {
     ingredients: [],
     possibleIngredients: [
-      {name: 'Salad', color: '#7fe02a'},
+      {name: 'Lettuce', color: '#7fe02a'},
       {name: 'Seitan', color: '#664411'},
       {name: 'Tomato', color: '#ee0000'},
       {name: 'Pickles', color: '#25c160'}],

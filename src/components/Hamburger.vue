@@ -1,9 +1,9 @@
 <template>
-  <div max-width="800px">
-    <div>Bun</div>
-    <div v-on:click="showChooser()">+</div>
-    <div v-for="(ingredient, index) in ingredients" v-bind:key="index" v-on:click="removeAt(index)">{{ ingredient.name }}</div>
-    <div>Bun</div>
+  <div class="hamburger">
+    <div class="bun">Bun</div>
+    <div v-on:click="showChooser()" class="plus">+</div>
+    <div v-for="(ingredient, index) in ingredients" v-bind:key="index" v-on:click="removeAt(index)" v-bind:style="getColorStyle(ingredient.color)">{{ ingredient.name }}</div>
+    <div class="bun">Bun</div>
   </div>
 </template>
 
@@ -22,11 +22,24 @@
       removeAt(index) {
         this.$store.commit('setIndex', index);
         this.$router.push('/changer');
+      },
+      getColorStyle(color) {
+        return `background-color: ${color}`;
       }
     }
   }
 </script>
 
 <style scoped>
-
+.hamburger {
+  max-width: 300px;
+  font-weight: bold;
+  color: white;
+}
+.bun {
+  background-color: chocolate;
+}
+.plus {
+  color: black;
+}
 </style>

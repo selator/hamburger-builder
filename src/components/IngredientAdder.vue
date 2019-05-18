@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="ingredient in ingredients" v-bind:key="ingredient.id"  v-on:click="addIngredient(ingredient.name)">{{ ingredient.name }}</div>
+    <div v-for="ingredient in ingredients" v-bind:key="ingredient.id"  v-on:click="addIngredient(ingredient)">{{ ingredient.name }}</div>
   </div>
 </template>
 
@@ -13,8 +13,8 @@
       }
     },
     methods: {
-      addIngredient(name) {
-        this.$store.commit('addIngredient', {name});
+      addIngredient(ingredient) {
+        this.$store.commit('addIngredient', ingredient);
         this.$router.push('/');
       }
     }

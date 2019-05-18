@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="ingredient in ingredients" v-bind:key="ingredient.id"  v-on:click="changeIngredient(ingredient.name)">{{ ingredient.name }}</div>
+    <div v-for="ingredient in ingredients" v-bind:key="ingredient.id"  v-on:click="changeIngredient(ingredient)">{{ ingredient.name }}</div>
     <div v-on:click="removeIngredient()">Remove</div>
   </div>
 </template>
@@ -14,12 +14,12 @@
       }
     },
     methods: {
-      changeIngredient(name) {
-        this.$store.commit('changeIngredient', {name});
+      changeIngredient(ingredient) {
+        this.$store.commit('changeIngredient', ingredient);
         this.$router.push('/');
       },
       removeIngredient() {
-        this.$store.commit('removeIngredient', {name});
+        this.$store.commit('removeIngredient');
         this.$router.push('/');
       }
     }

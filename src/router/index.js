@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Hamburger from "../components/Hamburger";
-import IngredientChooser from "../components/IngredientChooser";
+import IngredientAdder from "../components/IngredientAdder";
+import IngredientChanger from "../components/IngredientChanger";
 
 Vue.use(Router);
 
@@ -15,7 +16,12 @@ export default new Router({
     {
       path: "/chooser",
       name: "chooser",
-      component: IngredientChooser,
+      component: IngredientAdder,
+    },
+    {
+      path: "/changer",
+      name: "changer",
+      component: IngredientChanger,
     }
   ]
 });

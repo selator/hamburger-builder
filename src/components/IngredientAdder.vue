@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: "IngredientChooser",
+    name: "IngredientAdder",
     computed: {
       ingredients() {
         return this.$store.state.possibleIngredients;

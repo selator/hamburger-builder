@@ -1,7 +1,9 @@
 <template>
   <div>
-    <Lettuce v-if="$route.params.id ==='lettuce'">ingredient detail page {{ $route.params.id }}</Lettuce>
-    <Seitan v-if="$route.params.id ==='seitan'">ingredient detail page {{ $route.params.id }}</Seitan>
+    <Lettuce v-if="ingredient.name ==='Lettuce'">ingredient detail page {{ $route.params.id }}</Lettuce>
+    <Seitan v-if="ingredient.name ==='Seitan'">ingredient detail page {{ $route.params.id }}</Seitan>
+    <button v-on:click="$emit('cancel')">Cancel</button>
+    <button v-on:click="$emit('okay')">OK</button>
   </div>
 </template>
 
@@ -10,7 +12,8 @@
   import Seitan from "./Seitan";
   export default {
     name: "IngredientDetails",
-    components: {Seitan, Lettuce}
+    components: {Seitan, Lettuce},
+    props: {ingredient: undefined},
   }
 </script>
 

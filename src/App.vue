@@ -1,17 +1,12 @@
 <template>
   <div id="app">
-    <Hamburger />
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Hamburger from './components/Hamburger.vue'
-
 export default {
-  name: 'app',
-  components: {
-    Hamburger
-  }
+  name: 'App'
 }
 </script>
 

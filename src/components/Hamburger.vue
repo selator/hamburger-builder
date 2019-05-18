@@ -12,7 +12,7 @@
     name: "Hamburger",
     computed: {
       ingredients() {
-        return this.$store.state.ingredients;
+        return this.$store.state.ingredients.slice().reverse();
       }
     },
     methods: {

@@ -1,11 +1,19 @@
 <template>
-    <div>This is a lettuce.</div>
+  <div>
+    <div>This is a lettuce. Mostly water.</div>
+    <img v-bind:src="`${publicPath}images/lettuce.jpg`" alt="Picture of tomatoes"/>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "Lettuce"
+  export default {
+    name: "Lettuce",
+    data() {
+      return {
+        publicPath: process.env.BASE_URL
+      }
     }
+  }
 </script>
 
 <style scoped>

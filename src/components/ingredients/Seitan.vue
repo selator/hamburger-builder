@@ -1,5 +1,5 @@
 <template>
-    <div>This is plain gluten.</div>
+    <div>This is plain gluten. No animals were harmed in the making of this burger patty.</div>
 
 </template>
 

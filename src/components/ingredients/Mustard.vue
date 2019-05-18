@@ -1,5 +1,5 @@
 <template>
-    <div>Yellow condiment.</div>
+    <div>Yellow condiment. Good choice!</div>
 </template>
 
 <script>

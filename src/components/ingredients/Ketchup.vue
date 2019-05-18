@@ -1,5 +1,5 @@
 <template>
-    <div>Red condiment.</div>
+    <div>Red condiment made of tomatoes.</div>
 </template>
 
 <script>

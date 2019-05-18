@@ -1,5 +1,5 @@
 <template>
-    <div>Pickled cucumbers.</div>
+    <div>Pickled cucumbers. Yummy.</div>
 </template>
 
 <script>

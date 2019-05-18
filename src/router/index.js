@@ -21,10 +21,9 @@ export default new Router({
       component: IngredientAdder,
     },
     {
-      path: "/changer",
+      path: "/changer/:index",
       name: "changer",
       component: IngredientChanger,
-
     },
     {
       path: "/details/:id",

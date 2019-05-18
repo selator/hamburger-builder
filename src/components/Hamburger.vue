@@ -20,8 +20,7 @@
         this.$router.push('/chooser');
       },
       removeAt(index) {
-        this.$store.commit('setIndex', this.$store.state.ingredients.length - index - 1);
-        this.$router.push('/changer');
+        this.$router.push(`/changer/${this.$store.state.ingredients.length - index - 1}`);
       },
       getColorStyle(color) {
         return `background-color: ${color}`;

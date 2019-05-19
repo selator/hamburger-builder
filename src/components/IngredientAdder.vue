@@ -5,7 +5,7 @@
         ingredient.name }}
       </div>
     </div>
-    <IngredientDetails v-if="shouldShowDetails" v-bind:ingredient="ingredient" v-on:okay="addIngredient(ingredient)"
+    <IngredientDetails v-if="shouldShowDetails" v-bind:ingredient="ingredient" 
                        v-on:cancel="hideDetails()"/>
   </div>
 </template>

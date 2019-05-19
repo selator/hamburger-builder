@@ -29,7 +29,7 @@
     },
     methods: {
       showDetails(ingredient) {
-        this.ingredient = ingredient;
+        this.$store.state.page.chooser.selectedIngredient = ingredient;
         this.$store.state.page.chooser.shouldShowDetails=true;
 
       },

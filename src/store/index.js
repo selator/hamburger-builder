@@ -40,7 +40,8 @@ const store = new Vuex.Store({
         },
         page: {
             chooser: {
-                shouldShowDetails: false
+                shouldShowDetails: false,
+                selectedIngredient: undefined
             }
         }
     },

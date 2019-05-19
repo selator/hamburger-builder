@@ -3,7 +3,7 @@
         <button v-on:click="handleCancel()">Cancel</button>
         <button v-on:click="handleOkay()">OK</button>
         <div>Vegan Substitutes</div>
-        <VeganSubstitutes v-if="substitutes.length > 0" v-bind:substitutes="substitutes"></VeganSubstitutes>
+        <VeganSubstitutes v-if="substitutes != undefined" v-bind:substitutes="substitutes"></VeganSubstitutes>
     </div>
 </template>
 
@@ -16,7 +16,8 @@
         computed: {
             substitutes() {
                 const substitutesArray = [];
-                for (let s of this.$store.state.possibleIngredients[this.ingredient].substitutes) {
+                const subs = this.$store.state.possibleIngredients[this.ingredient].substitutes || [];
+                for (let s of subs) {
                     substitutesArray.push(this.$store.state.possibleIngredients[s])
                 }
                 return substitutesArray;

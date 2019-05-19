@@ -13,16 +13,11 @@
         components: {IngredientActions},
         computed: {
             substitutes() {
-                for (let i of this.$store.state.possibleIngredients) {
-                    if (i.name === 'Veal') return i.substitutes || []
-                }
-                return []
+                return this.$store.state.possibleIngredients.veal.substitutes || [];
             },
             ingredient() {
-                for (let i of this.$store.state.possibleIngredients) {
-                    if (i.name === 'Veal') return i
-                }
-                return {}
+                return this.$store.state.possibleIngredients.veal;
+
             }
         }
     }

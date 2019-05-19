@@ -2,17 +2,24 @@
     <div>
         <button v-on:click="handleCancel()">Cancel</button>
         <button v-on:click="handleOkay()">OK</button>
-        <button v-if="substitutes.length > 0">Vegan options</button>
+        <div>Vegan Substitutes</div>
+        <VeganSubstitutes v-if="substitutes.length > 0" v-bind:substitutes="substitutes"></VeganSubstitutes>
     </div>
 </template>
 
 <script>
+    import VeganSubstitutes from "../VeganSubstitutes";
+
     export default {
         name: 'IngredientActions',
-
+        components: {VeganSubstitutes},
         computed: {
             substitutes() {
-                return this.$store.state.possibleIngredients[this.ingredient].substitutes || []
+                const substitutesArray = [];
+                for (let s of this.$store.state.possibleIngredients[this.ingredient].substitutes) {
+                    substitutesArray.push(this.$store.state.possibleIngredients[s])
+                }
+                return substitutesArray;
             }
         },
         props: {

@@ -35,7 +35,7 @@ const store = new Vuex.Store({
             }
             ,
             "veal": {
-                name: 'Veal', color: '#664411', substitutes: ['Seitan']
+                name: 'Veal', color: '#664411', substitutes: ['seitan']
             }
         },
         page: {

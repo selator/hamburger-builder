@@ -21,6 +21,7 @@ export default {
             window.console.log("ok")
             this.$store.commit('addIngredient', ingredient);
             this.$router.push('/');
+            this.$store.state.page.chooser.shouldShowDetails=false;
         }
     }
 }

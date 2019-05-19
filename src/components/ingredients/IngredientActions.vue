@@ -1,28 +1,32 @@
 <template>
     <div>
         <button v-on:click="handleCancel()">Cancel</button>
-        <button v-on:click="handleOkay(ingredient)">OK</button>
+        <button v-on:click="handleOkay()">OK</button>
         <button v-if="substitutes.length > 0">Vegan options</button>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'IngredientActions',
-    props: {
-        'substitutes': Array,
-        ingredient: Object
-    },
-    methods: {
-        handleCancel() {
-                this.$store.state.page.chooser.shouldShowDetails=false;
+    export default {
+        name: 'IngredientActions',
+
+        computed: {
+            substitutes() {
+                return this.$store.state.possibleIngredients[this.ingredient].substitutes || []
+            }
         },
-        handleOkay(ingredient) {
-            window.console.log("ok")
-            this.$store.commit('addIngredient', ingredient);
-            this.$router.push('/');
-            this.$store.state.page.chooser.shouldShowDetails=false;
+        props: {
+            ingredient: String
+        },
+        methods: {
+            handleCancel() {
+                this.$store.state.page.chooser.shouldShowDetails = false;
+            },
+            handleOkay() {
+                this.$store.commit('addIngredient', this.$store.state.possibleIngredients[this.ingredient]);
+                this.$router.push('/');
+                this.$store.state.page.chooser.shouldShowDetails = false;
+            }
         }
     }
-}
 </script>

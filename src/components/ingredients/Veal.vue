@@ -1,17 +1,17 @@
 <template>
-    <div>This is plain gluten. No animals were harmed in the making of this burger patty.
-        <IngredientActions ingredient="seitan"></IngredientActions>
-
+    <div>
+        Made out of blood and violence
+        <IngredientActions ingredient="veal"></IngredientActions>
     </div>
-
 </template>
 
 <script>
     import IngredientActions from './IngredientActions';
 
     export default {
-        name: "Seitan",
+        name: "Veal",
         components: {IngredientActions},
+
     }
 </script>
 

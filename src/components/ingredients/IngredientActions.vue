@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         handleCancel() {
-            window.console.log("cancel")
+                this.$store.state.page.chooser.shouldShowDetails=false;
         },
         handleOkay(ingredient) {
             window.console.log("ok")

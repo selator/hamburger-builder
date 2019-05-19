@@ -17,9 +17,12 @@
     name: "IngredientAdder",
     components: {IngredientDetails},
     data() {
-      return {shouldShowDetails: false, ingredient: {}};
+      return { ingredient: {}};
     },
     computed: {
+      shouldShowDetails(){
+        return this.$store.state.page.chooser.shouldShowDetails;
+      },
       ingredients() {
         return this.$store.state.possibleIngredients;
       }
@@ -27,10 +30,8 @@
     methods: {
       showDetails(ingredient) {
         this.ingredient = ingredient;
-        this.shouldShowDetails = true;
-      },
-      hideDetails() {
-        this.shouldShowDetails = false;
+        this.$store.state.page.chooser.shouldShowDetails=true;
+
       },
       addIngredient(ingredient) {
         this.$store.commit('addIngredient', ingredient);

@@ -14,7 +14,12 @@ const store = new Vuex.Store({
       {name: 'Ketchup', color: '#ff1111'},
       {name: 'Mustard', color: '#d6c000'},
       {name: 'Veal', color: '#664411', substitutes: ['Seitan']}
-    ]
+    ],
+    page: {
+      chooser:{
+        shouldShowDetails: false
+      }
+    }
   },
   mutations: {
     addIngredient(state, ingredient) {

@@ -4,3 +4,4 @@ export { default as Tomato } from './Tomato.vue';
 export { default as Pickles } from './Pickles.vue';
 export { default as Mustard } from './Mustard.vue';
 export { default as Ketchup } from './Ketchup.vue';
+export { default as Veal } from './Veal.vue';

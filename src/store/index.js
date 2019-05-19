@@ -13,6 +13,7 @@ const store = new Vuex.Store({
       {name: 'Pickles', color: '#25c160'},
       {name: 'Ketchup', color: '#ff1111'},
       {name: 'Mustard', color: '#d6c000'},
+      {name: 'Veal', color: '#664411', substitutes: ['Seitan']}
     ]
   },
   mutations: {
